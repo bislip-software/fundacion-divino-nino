@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f201",
+    "name": "admin-Bank",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f202",
+    "name": "admin-Currency",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f203",
+    "name": "admin-Currency Exchange",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f204",
+    "name": "admin-Healthcare Practitioner",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f205",
+    "name": "admin-Healthcare Practitioner Item",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f206",
+    "name": "admin-Item",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f207",
+    "name": "admin-Patient",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f208",
+    "name": "admin-Municipality",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f209",
+    "name": "admin-Parish",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f210",
+    "name": "admin-Mode of Payment",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f211",
+    "name": "admin-Municipality Parish",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f212",
+    "name": "admin-Role",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f213",
+    "name": "admin-Sales Invoice Payment",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f214",
+    "name": "admin-Sales Invoice Service",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f215",
+    "name": "admin-Sales Invoice",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f216",
+    "name": "admin-Service Healthcare Practitioner",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f217",
+    "name": "admin-Service",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f218",
+    "name": "admin-User",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f219",
+    "name": "admin-DocType",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f220",
+    "name": "admin-DocPerm",
+    "role": "64a1c8e5f0b9c2b1d2e4f123",
+    "create": true,
+    "read": true,
+    "update": true,
+    "delete": true
+  }
+]

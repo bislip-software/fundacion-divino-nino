@@ -1,0 +1,1128 @@
+[
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f301",
+    "name": "Bank",
+    "caption": "Bancos",
+    "autoname": "fields:bank_name",
+    "search_fields": "bank_name",
+    "sort_field": "bank_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#0d6efd",
+    "icon": "university",
+    "fields": [
+      {
+        "field_name": "bank_name",
+        "field_type": "Data",
+        "label": "Nombre del Banco",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f201"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f302",
+    "name": "Currency",
+    "caption": "Monedas",
+    "autoname": "fields:currency_name",
+    "search_fields": "currency_name,symbol",
+    "sort_field": "currency_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#28a745",
+    "icon": "coins",
+    "fields": [
+      {
+        "field_name": "currency_name",
+        "field_type": "Data",
+        "label": "Nombre",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "symbol",
+        "field_type": "Data",
+        "label": "Símbolo",
+        "required": true,
+        "in_list_view": true,
+        "index": 2
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f202"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f303",
+    "name": "Currency Exchange",
+    "caption": "Tipos de Cambio",
+    "autoname": "fields:pair_name",
+    "search_fields": "pair_name",
+    "sort_field": "pair_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#fd7e14",
+    "icon": "exchange-alt",
+    "fields": [
+      {
+        "field_name": "from_currency",
+        "field_type": "Link",
+        "label": "Moneda Origen",
+        "required": true,
+        "options": "Currency | currency_name | symbol",
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "to_currency",
+        "field_type": "Link",
+        "label": "Moneda Destino",
+        "required": true,
+        "options": "Currency | currency_name | symbol",
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "pair_name",
+        "field_type": "Data",
+        "label": "Nombre de Paridad",
+        "required": true,
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "exchange_rate",
+        "field_type": "Number",
+        "label": "Tasa de Cambio",
+        "required": true,
+        "in_list_view": true,
+        "index": 4
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f203"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f304",
+    "name": "Healthcare Practitioner",
+    "caption": "Profesionales de Salud",
+    "autoname": "fields:national_id",
+    "search_fields": "national_id,first_name,last_name,full_name",
+    "sort_field": "national_id",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#6610f2",
+    "icon": "user-md",
+    "fields": [
+      {
+        "field_name": "national_id",
+        "field_type": "Data",
+        "label": "Cédula / ID",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "first_name",
+        "field_type": "Data",
+        "label": "Primer Nombre",
+        "required": true,
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "second_name",
+        "field_type": "Data",
+        "label": "Segundo Nombre",
+        "required": false,
+        "in_list_view": false,
+        "index": 3
+      },
+      {
+        "field_name": "last_name",
+        "field_type": "Data",
+        "label": "Apellido",
+        "required": false,
+        "in_list_view": true,
+        "index": 4
+      },
+      {
+        "field_name": "full_name",
+        "field_type": "Data",
+        "label": "Nombre Completo",
+        "required": false,
+        "in_list_view": false,
+        "index": 5
+      },
+      {
+        "field_name": "gender",
+        "field_type": "Select",
+        "label": "Género",
+        "required": false,
+        "options": "Masculino\nFemenino\nOtro",
+        "in_list_view": true,
+        "index": 6
+      },
+      {
+        "field_name": "items",
+        "field_type": "Table",
+        "label": "Items del Profesional",
+        "required": false,
+        "options": "Healthcare Practitioner Item",
+        "in_list_view": false,
+        "index": 7
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f204"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f305",
+    "name": "Healthcare Practitioner Item",
+    "caption": "Items de Profesional",
+    "autoname": "hash",
+    "search_fields": "item",
+    "sort_field": "item",
+    "sort_order": "asc",
+    "in_desktop": false,
+    "in_global_search": false,
+    "is_table": true,
+    "color": "#20c997",
+    "icon": "tasks",
+    "fields": [
+      {
+        "field_name": "item",
+        "field_type": "Link",
+        "label": "Item",
+        "required": true,
+        "options": "Item | item_name",
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f205"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f306",
+    "name": "Item",
+    "caption": "Items",
+    "autoname": "fields:item_name",
+    "search_fields": "item_name",
+    "sort_field": "item_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#17a2b8",
+    "icon": "clipboard-list",
+    "fields": [
+      {
+        "field_name": "item_name",
+        "field_type": "Data",
+        "label": "Nombre del Item",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "price",
+        "field_type": "Number",
+        "label": "Precio",
+        "required": true,
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "currency",
+        "field_type": "Link",
+        "label": "Moneda",
+        "required": false,
+        "options": "Currency | currency_name | symbol",
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "practitioner_payroll",
+        "field_type": "Number",
+        "label": "Retorno Profesional",
+        "required": true,
+        "in_list_view": false,
+        "index": 4
+      },
+      {
+        "field_name": "foundation_payroll",
+        "field_type": "Number",
+        "label": "Retorno Fundación",
+        "required": true,
+        "in_list_view": false,
+        "index": 5
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f206"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f307",
+    "name": "Patient",
+    "caption": "Pacientes",
+    "autoname": "fields:national_id",
+    "search_fields": "national_id,full_name",
+    "sort_field": "full_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#6610f2",
+    "icon": "user-injured",
+    "quick_entry": true,
+    "fields": [
+      {
+        "field_name": "national_id",
+        "field_type": "Data",
+        "label": "Cédula / ID",
+        "required": true,
+        "in_list_view": true,
+        "in_quick_entry": true,
+        "index": 1
+      },
+      {
+        "field_name": "full_name",
+        "field_type": "Data",
+        "label": "Nombre Completo",
+        "required": false,
+        "in_list_view": true,
+        "in_quick_entry": true,
+        "index": 2
+      },
+      {
+        "field_name": "gender",
+        "field_type": "Select",
+        "label": "Género",
+        "required": false,
+        "options": "Masculino\nFemenino\nOtro",
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "dob",
+        "field_type": "Date",
+        "label": "Fecha de Nacimiento",
+        "required": false,
+        "in_list_view": false,
+        "index": 4
+      },
+      {
+        "field_name": "municipality",
+        "field_type": "Link",
+        "label": "Municipio",
+        "required": false,
+        "options": "Municipality | municipality_name",
+        "in_list_view": true,
+        "index": 5
+      },
+      {
+        "field_name": "parish",
+        "field_type": "Link",
+        "label": "Parroquia",
+        "required": false,
+        "options": "Parish | parish_name",
+        "in_list_view": true,
+        "index": 6
+      },
+      {
+        "field_name": "sector",
+        "field_type": "Data",
+        "label": "Sector",
+        "required": false,
+        "in_list_view": false,
+        "index": 7
+      },
+      {
+        "field_name": "email",
+        "field_type": "Data",
+        "label": "Email",
+        "required": false,
+        "in_list_view": false,
+        "index": 8
+      },
+      {
+        "field_name": "mobile",
+        "field_type": "Data",
+        "label": "Celular",
+        "required": false,
+        "in_list_view": true,
+        "index": 9
+      },
+      {
+        "field_name": "phone",
+        "field_type": "Data",
+        "label": "Teléfono",
+        "required": false,
+        "in_list_view": false,
+        "index": 10
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f207"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f308",
+    "name": "Municipality",
+    "caption": "Municipios",
+    "autoname": "fields:municipality_name",
+    "search_fields": "municipality_name",
+    "sort_field": "municipality_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#20c997",
+    "icon": "city",
+    "fields": [
+      {
+        "field_name": "municipality_name",
+        "field_type": "Data",
+        "label": "Nombre del Municipio",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f208"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f309",
+    "name": "Parish",
+    "caption": "Parroquias",
+    "autoname": "fields:parish_name",
+    "search_fields": "parish_name",
+    "sort_field": "parish_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#6f42c1",
+    "icon": "map-marker-alt",
+    "fields": [
+      {
+        "field_name": "parish_name",
+        "field_type": "Data",
+        "label": "Nombre de la Parroquia",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f209"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f310",
+    "name": "Mode of Payment",
+    "caption": "Formas de Pago",
+    "autoname": "fields:mode_of_payment",
+    "search_fields": "mode_of_payment",
+    "sort_field": "mode_of_payment",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#20c997",
+    "icon": "credit-card",
+    "fields": [
+      {
+        "field_name": "mode_of_payment",
+        "field_type": "Data",
+        "label": "Modo de Pago",
+        "required": false,
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f210"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f311",
+    "name": "Municipality Parish",
+    "caption": "Parroquias por Municipio",
+    "autoname": "hash",
+    "search_fields": "parish",
+    "sort_field": "parish",
+    "sort_order": "asc",
+    "in_desktop": false,
+    "in_global_search": false,
+    "is_table": true,
+    "color": "#fd7e14",
+    "icon": "map-pin",
+    "fields": [
+      {
+        "field_name": "parish",
+        "field_type": "Link",
+        "label": "Parroquia",
+        "required": false,
+        "options": "Parish | parish_name",
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f211"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f312",
+    "name": "Role",
+    "caption": "Roles",
+    "autoname": "fields:role_name",
+    "search_fields": "role_name",
+    "sort_field": "role_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#6f42c1",
+    "icon": "shield-alt",
+    "fields": [
+      {
+        "field_name": "role_name",
+        "field_type": "Data",
+        "label": "Nombre del Rol",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f212"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f313",
+    "name": "Sales Invoice Payment",
+    "caption": "Pagos de Factura",
+    "autoname": "hash",
+    "search_fields": "bank_reference_number",
+    "sort_field": "date",
+    "sort_order": "asc",
+    "in_desktop": false,
+    "in_global_search": false,
+    "is_table": true,
+    "color": "#17a2b8",
+    "icon": "money-check-alt",
+    "fields": [
+      {
+        "field_name": "mode_of_payment",
+        "field_type": "Link",
+        "label": "Modo de Pago",
+        "required": false,
+        "options": "Mode of Payment | mode_of_payment",
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "amount",
+        "field_type": "Number",
+        "label": "Monto",
+        "required": true,
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "currency",
+        "field_type": "Link",
+        "label": "Moneda",
+        "required": false,
+        "options": "Currency | currency_name | symbol",
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "bank",
+        "field_type": "Link",
+        "label": "Banco",
+        "required": false,
+        "options": "Bank | bank_name",
+        "in_list_view": false,
+        "index": 4
+      },
+      {
+        "field_name": "bank_reference_number",
+        "field_type": "Data",
+        "label": "Referencia Bancaria",
+        "required": false,
+        "in_list_view": false,
+        "index": 5
+      },
+      {
+        "field_name": "date",
+        "field_type": "Date",
+        "label": "Fecha",
+        "required": false,
+        "in_list_view": true,
+        "index": 6
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f213"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f314",
+    "name": "Sales Invoice Service",
+    "caption": "Servicios de Factura",
+    "autoname": "hash",
+    "search_fields": "service",
+    "sort_field": "service",
+    "sort_order": "asc",
+    "in_desktop": false,
+    "in_global_search": false,
+    "is_table": true,
+    "color": "#6610f2",
+    "icon": "concierge-bell",
+    "fields": [
+      {
+        "field_name": "service",
+        "field_type": "Link",
+        "label": "Servicio",
+        "required": false,
+        "options": "Service | service_name",
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "practitioner",
+        "field_type": "Link",
+        "label": "Profesional",
+        "required": false,
+        "options": "Healthcare Practitioner | full_name",
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "item",
+        "field_type": "Link",
+        "label": "Item",
+        "required": false,
+        "options": "Item | item_name",
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "price_usd",
+        "field_type": "Number",
+        "label": "Precio USD",
+        "required": false,
+        "in_list_view": false,
+        "index": 4
+      },
+      {
+        "field_name": "price_ves",
+        "field_type": "Number",
+        "label": "Precio VES",
+        "required": false,
+        "in_list_view": false,
+        "index": 5
+      },
+      {
+        "field_name": "practitioner_payroll_usd",
+        "field_type": "Number",
+        "label": "Pago Profesional USD",
+        "required": false,
+        "in_list_view": false,
+        "index": 6
+      },
+      {
+        "field_name": "practitioner_payroll_ves",
+        "field_type": "Number",
+        "label": "Pago Profesional VES",
+        "required": false,
+        "in_list_view": false,
+        "index": 7
+      },
+      {
+        "field_name": "foundation_payroll_usd",
+        "field_type": "Number",
+        "label": "Pago Fundación USD",
+        "required": false,
+        "in_list_view": false,
+        "index": 8
+      },
+      {
+        "field_name": "foundation_payroll_ves",
+        "field_type": "Number",
+        "label": "Pago Fundación VES",
+        "required": false,
+        "in_list_view": false,
+        "index": 9
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f214"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f315",
+    "name": "Sales Invoice",
+    "caption": "Facturas",
+    "autoname": "hash",
+    "search_fields": "name,patient",
+    "sort_field": "date",
+    "sort_order": "desc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#ffc107",
+    "icon": "file-invoice-dollar",
+    "fields": [
+      {
+        "field_name": "patient",
+        "field_type": "Link",
+        "label": "Paciente",
+        "required": true,
+        "options": "Patient | full_name | national_id",
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "date",
+        "field_type": "Date",
+        "label": "Fecha",
+        "required": false,
+        "in_list_view": true,
+        "index": 2
+     },
+      {
+        "field_name": "time",
+        "field_type": "Time",
+        "label": "Hora",
+        "required": false,
+        "in_list_view": false,
+        "index": 3
+      },
+    {
+        "field_name": "currency_exchange",
+        "field_type": "Link",
+        "label": "Tipo de Cambio",
+        "required": true,
+        "options": "Currency Exchange | pair_name",
+        "in_list_view": false,
+        "index": 6
+      },
+      {
+        "field_name": "services",
+        "field_type": "Table",
+        "label": "Servicios",
+        "required": true,
+        "options": "Sales Invoice Service",
+        "in_list_view": false,
+        "index": 4
+      },
+      {
+        "field_name": "payments",
+        "field_type": "Table",
+        "label": "Pagos",
+        "required": true,
+        "options": "Sales Invoice Payment",
+        "in_list_view": false,
+        "index": 5
+      },
+      {
+        "field_name": "exchange_rate",
+        "field_type": "Number",
+        "label": "Tasa de Cambio",
+        "required": true,
+        "in_list_view": false,
+        "read_only": true,
+        "depends_on": "currency_exchange",
+        "fetch_from": "currency_exchange.exchange_rate",
+        "index": 7
+      },
+      {
+        "field_name": "total_usd",
+        "field_type": "Number",
+        "label": "Total USD",
+        "required": true,
+        "in_list_view": true,
+        "read_only": true,
+        "depends_on": "eval:doc.services.reduce((sum, service) => sum + (service.item.price || 0), 0)",
+        "index": 8
+      },
+      {
+        "field_name": "total_ves",
+        "field_type": "Number",
+        "label": "Total VES",
+        "required": true,
+        "in_list_view": true,
+        "read_only": true,
+        "depends_on": "eval:doc.total_usd * doc.exchange_rate",
+        "index": 9
+      },
+      {
+        "field_name": "total_paid_usd",
+        "field_type": "Number",
+        "label": "Total Pagado USD",
+        "required": false,
+        "in_list_view": false,
+        "read_only": true,
+        "depends_on": "eval:doc.payments.reduce((sum, payment) => sum + (payment.currency.symbol === 'USD' ? payment.amount : payment.currency.symbol === 'VES' ? (payment.amount / (doc.exchange_rate || 1)) : 0), 0)",
+        "index": 10
+      },
+      {
+        "field_name": "total_paid_ves",
+        "field_type": "Number",
+        "label": "Total Pagado VES",
+        "required": false,
+        "in_list_view": false,
+        "read_only": true,
+        "depends_on": "eval:doc.payments.reduce((sum, payment) => sum + (payment.currency.symbol === 'VES' ? payment.amount : (payment.currency.symbol === 'USD' ? (payment.amount * (doc.exchange_rate || 0)) : 0)), 0)",
+        "index": 11
+      },
+      {
+        "field_name": "paid",
+        "field_type": "Check",
+        "label": "Pagado",
+        "required": false,
+        "in_list_view": true,
+        "read_only": true,
+        "depends_on": "eval:(doc.total_paid_usd || 0) >= (doc.total_usd || 0) && (doc.total_paid_ves || 0) >= (doc.total_ves || 0)",
+        "index": 12
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f215"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f316",
+    "name": "Service Healthcare Practitioner",
+    "caption": "Profesionales del Servicio",
+    "autoname": "hash",
+    "search_fields": "practitioner",
+    "sort_field": "practitioner",
+    "sort_order": "asc",
+    "in_desktop": false,
+    "in_global_search": false,
+    "is_table": true,
+    "color": "#6c757d",
+    "icon": "user-nurse",
+    "fields": [
+      {
+        "field_name": "practitioner",
+        "field_type": "Link",
+        "label": "Profesional",
+        "required": false,
+        "options": "Healthcare Practitioner | full_name",
+        "in_list_view": true,
+        "index": 1
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f216"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f317",
+    "name": "Service",
+    "caption": "Servicios",
+    "autoname": "fields:service_name",
+    "search_fields": "service_name",
+    "sort_field": "service_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#007bff",
+    "icon": "stethoscope",
+    "fields": [
+      {
+        "field_name": "service_name",
+        "field_type": "Data",
+        "label": "Nombre del Servicio",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "practitioners",
+        "field_type": "Table",
+        "label": "Profesionales",
+        "required": false,
+        "options": "Service Healthcare Practitioner",
+        "in_list_view": false,
+        "index": 2
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f217"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f318",
+    "name": "User",
+    "caption": "Usuarios",
+    "autoname": "fields:email",
+    "search_fields": "email,username,first_name,last_name,full_name",
+    "sort_field": "first_name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#343a40",
+    "icon": "user",
+    "fields": [
+      {
+        "field_name": "enabled",
+        "field_type": "Check",
+        "label": "Activo",
+        "required": false,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "email",
+        "field_type": "Data",
+        "label": "Email",
+        "required": true,
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "role",
+        "field_type": "Link",
+        "label": "Rol",
+        "required": false,
+        "options": "Role | role_name",
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "first_name",
+        "field_type": "Data",
+        "label": "Nombre",
+        "required": true,
+        "in_list_view": true,
+        "index": 4
+      },
+      {
+        "field_name": "last_name",
+        "field_type": "Data",
+        "label": "Apellido",
+        "required": false,
+        "in_list_view": true,
+        "index": 5
+      },
+      {
+        "field_name": "full_name",
+        "field_type": "Data",
+        "label": "Nombre Completo",
+        "required": false,
+        "in_list_view": true,
+        "index": 6
+      },
+      {
+        "field_name": "username",
+        "field_type": "Data",
+        "label": "Nombre de Usuario",
+        "required": false,
+        "in_list_view": true,
+        "index": 7
+      },
+      {
+        "field_name": "gender",
+        "field_type": "Select",
+        "label": "Género",
+        "required": false,
+        "options": "Masculino\nFemenino\nOtro",
+        "in_list_view": false,
+        "index": 8
+      },
+      {
+        "field_name": "mobile",
+        "field_type": "Data",
+        "label": "Celular",
+        "required": false,
+        "in_list_view": false,
+        "index": 9
+      },
+      {
+        "field_name": "phone",
+        "field_type": "Data",
+        "label": "Teléfono",
+        "required": false,
+        "in_list_view": false,
+        "index": 10
+      },
+      {
+        "field_name": "dob",
+        "field_type": "Date",
+        "label": "Fecha de Nacimiento",
+        "required": false,
+        "in_list_view": false,
+        "index": 11
+      },
+      {
+        "field_name": "bio",
+        "field_type": "Small Text",
+        "label": "Biografía",
+        "required": false,
+        "in_list_view": false,
+        "index": 12
+      },
+      {
+        "field_name": "password",
+        "field_type": "Password",
+        "label": "Contraseña",
+        "required": false,
+        "in_list_view": false,
+        "index": 13
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f218"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f319",
+    "name": "DocType",
+    "caption": "Tipos de Documento",
+    "autoname": "fields:name",
+    "search_fields": "name,caption",
+    "sort_field": "name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": true,
+    "is_table": false,
+    "color": "#0b5ed7",
+    "icon": "th-list",
+    "fields": [
+      {
+        "field_name": "name",
+        "field_type": "Data",
+        "label": "Nombre",
+        "required": true,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "caption",
+        "field_type": "Data",
+        "label": "Título",
+        "required": false,
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "autoname",
+        "field_type": "Data",
+        "label": "Autoname",
+        "required": false,
+        "in_list_view": false,
+        "index": 3
+      },
+      {
+        "field_name": "search_fields",
+        "field_type": "Data",
+        "label": "Campos de Búsqueda",
+        "required": false,
+        "in_list_view": false,
+        "index": 4
+      },
+      {
+        "field_name": "sort_field",
+        "field_type": "Data",
+        "label": "Campo de Orden",
+        "required": false,
+        "in_list_view": false,
+        "index": 5
+      },
+      {
+        "field_name": "sort_order",
+        "field_type": "Select",
+        "label": "Orden",
+        "required": false,
+        "options": "asc\ndesc",
+        "in_list_view": false,
+        "index": 6
+      },
+      {
+        "field_name": "in_desktop",
+        "field_type": "Check",
+        "label": "Mostrar en Escritorio",
+        "required": false,
+        "in_list_view": false,
+        "index": 7
+      },
+      {
+        "field_name": "in_global_search",
+        "field_type": "Check",
+        "label": "Buscar Globalmente",
+        "required": false,
+        "in_list_view": false,
+        "index": 8
+      },
+      {
+        "field_name": "is_table",
+        "field_type": "Check",
+        "label": "Es Tabla",
+        "required": false,
+        "in_list_view": false,
+        "index": 9
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f219"]
+  },
+  {
+    "_id": "64a1c8e5f0b9c2b1d2e4f320",
+    "name": "DocPerm",
+    "caption": "Permisos de Documento",
+    "autoname": "hash",
+    "search_fields": "name",
+    "sort_field": "name",
+    "sort_order": "asc",
+    "in_desktop": true,
+    "in_global_search": false,
+    "is_table": false,
+    "color": "#6610f2",
+    "icon": "lock",
+    "fields": [
+      {
+        "field_name": "name",
+        "field_type": "Data",
+        "label": "Nombre",
+        "required": false,
+        "in_list_view": true,
+        "index": 1
+      },
+      {
+        "field_name": "role",
+        "field_type": "Link",
+        "label": "Rol",
+        "required": false,
+        "options": "Role | role_name",
+        "in_list_view": true,
+        "index": 2
+      },
+      {
+        "field_name": "create",
+        "field_type": "Check",
+        "label": "Crear",
+        "required": false,
+        "in_list_view": true,
+        "index": 3
+      },
+      {
+        "field_name": "read",
+        "field_type": "Check",
+        "label": "Leer",
+        "required": false,
+        "in_list_view": true,
+        "index": 4
+      },
+      {
+        "field_name": "update",
+        "field_type": "Check",
+        "label": "Actualizar",
+        "required": false,
+        "in_list_view": true,
+        "index": 5
+      },
+      {
+        "field_name": "delete",
+        "field_type": "Check",
+        "label": "Eliminar",
+        "required": false,
+        "in_list_view": true,
+        "index": 6
+      }
+    ],
+    "permissions": ["64a1c8e5f0b9c2b1d2e4f220"]
+  }
+]

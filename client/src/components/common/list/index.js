@@ -473,7 +473,7 @@ const ListView = ({ match }) => {
               <SortingOptions>
                 {doctypeSortFields.map((field, index) => (
                   <SortingOption
-                    key={index}
+                    key={`${index}-${field.field_name}`}
                     onClick={changeSortField.bind(null, index)}
                   >
                     {field.label}
@@ -505,7 +505,7 @@ const ListView = ({ match }) => {
             )}
           </TableHeader>
           {doctypeListFields.map(({ label }) => (
-            <TableHeader>{label}</TableHeader>
+            <TableHeader key={label}>{label}</TableHeader>
           ))}
           <TableHeader></TableHeader>
           <TableHeader></TableHeader>
@@ -513,7 +513,7 @@ const ListView = ({ match }) => {
 
         {state.length > 0 &&
           state.map((data, index) => (
-            <TableRow data-name={data.name}>
+            <TableRow key={`${index}-${data.name}`} data-name={data.name}>
               <TableColumn>
                 {doctypePermissions.delete && (
                   <Input
@@ -534,7 +534,7 @@ const ListView = ({ match }) => {
                   }
 
                   return (
-                    <TableColumn>
+                    <TableColumn key={`${index}-${field_name}`}>
                       <Span bold={bold}>
                         {index === 0 ? (
                           <StyledLinkA

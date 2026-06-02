@@ -160,7 +160,7 @@ const FormView = ({ location }) => {
         }
       } else {
         try {
-          doc[field_name] = eval(depends_on.split(":")[1]);
+          doc[field_name] = eval(depends_on.split("eval:")[1]);
         } catch (error) {
           if (field_type === "Number") doc[field_name] = 0;
           if (field_type === "Data") doc[field_name] = "";
