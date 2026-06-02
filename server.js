@@ -15,7 +15,7 @@ const errorHandler = require("./middlewares/error");
 const connectDB = require("./config/db");
 
 // Load env vars
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: path.resolve(process.cwd(), `.env.${process.env.NODE_ENV}`) });
 
 // Connect to database
 connectDB();
@@ -67,18 +67,9 @@ app.get("*", (req, res) =>
 // Central error handling
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5001;
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 5001;
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
 
-const server = app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  )
-);
-
-// Handle unhandled promise rejections
-process.on("unhandledRejection", (err, promise) => {
-  console.log(`Error: ${err.message}`.red);
-  // Close server & exit process
-  // server.close(() => process.exit(1));
-});
+module.exports = app;
