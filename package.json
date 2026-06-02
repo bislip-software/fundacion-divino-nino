@@ -7,7 +7,7 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
+    "vercel-build": "cd client && npm install && CI=false npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
