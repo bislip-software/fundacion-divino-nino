@@ -1,10 +1,11 @@
 const fs = require("fs");
+const path = require("path");
 const mongoose = require("mongoose");
 const colors = require("colors");
 const dotenv = require("dotenv");
 
 // Load env vars
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: path.resolve(process.cwd(), `.env.${process.env.NODE_ENV}`) });
 
 // Load models
 const Role = require("./models/role");
